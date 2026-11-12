@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d3a">
+  <meta name="description" content="從零讀懂 ASR5K 量測系統。用圖解、互動實驗與逐步驗證，學會把 ADC 數字變成可信的電壓、電流與功率。">
+  <title>Measure System｜從零讀懂量測</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23123d3a'/%3E%3Cpath d='M10 34h9l7-17 12 30 7-13h9' fill='none' stroke='%23c8efd9' stroke-width='4'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <aside class="sidebar" id="sidebar">
+    <a href="#overview" class="brand" aria-label="Measure System 首頁"><span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 17h6l4-9 6 17 4-8h6"/></svg></span><span>MEASURE<span class="brand-sub">SYSTEM / 學習指南</span></span></a>
+    <div class="nav-label">從理解，到動手驗證</div>
+    <nav aria-label="教學章節" id="chapter-nav"></nav>
+    <div class="sidebar-bottom"><div class="progress-title"><span>我的學習進度</span><strong id="progress-count">0 / 6</strong></div><div class="progress-track"><div id="progress-bar"></div></div><p>只記錄在目前的瀏覽器</p><button class="text-button" id="reset-progress">重設進度 ↺</button></div>
+    <a class="repo-link" href="https://github.com/linwuyen/Measure-System" target="_blank" rel="noopener">專案 GitHub <span>↗</span></a>
+  </aside>
+  <div class="page-shell">
+    <header class="topbar"><button class="menu-button" id="menu-toggle" aria-label="開啟章節選單" aria-expanded="false" aria-controls="sidebar">☰</button><div class="breadcrumb">學習手冊 <span>/</span> <strong id="breadcrumb-title">認識量測系統</strong></div><a href="#sources" class="edition"><span></span> ASR5K · 384 入門版</a></header>
+    <main id="main" tabindex="-1"><noscript>請開啟瀏覽器的 JavaScript 以閱讀互動教材。這份網站不連線或控制設備。</noscript></main>
+    <footer class="site-footer"><span>MEASURE SYSTEM <b>／</b> 從每一筆資料，理解每一個結果。</span><a href="#sources">資料來源與適用範圍 ↗</a></footer>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
