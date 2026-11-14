@@ -1,6 +1,6 @@
 import { sineMetrics, threePoint, mergedRms } from './math.js';
-import { firstTestPreparation, dcWalkthrough } from './first-test-guide.js';
-import { windowsCompilerSetup, centeredTimingExample, phaseACriteria } from './measurement-examples.js';
+import { firstTestPreparation, dcWalkthrough } from './first-test-guide.js?v=20261114-review2';
+import { windowsCompilerSetup, centeredTimingExample, phaseACriteria } from './measurement-examples.js?v=20261114-review2';
 
 const base='https://github.com/linwuyen/ASR5K_v2_28384/blob/f0d6a6205482384a06d4371b5a5a4e230a8e83e8/';
 const cpu=base+'ASR5K_F28384D_CPU1/';

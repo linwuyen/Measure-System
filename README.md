@@ -13,6 +13,7 @@
 - 修改 `docs/` 中的檔案並推送到 `main`，GitHub Pages 會自動部署更新。
 - `docs/.nojekyll` 讓 GitHub 直接發布靜態檔案，不經 Jekyll 轉換。
 - 部署進度可在專案的 **Actions** 或 **Settings → Pages** 查看。
+- 更新教材 JS 時，同步更新 `index.html` 入口與 `app.js` 中相關 import 的 `?v=` 版本標記，避免瀏覽器混用新版入口與舊版教材快取。
 
 ## 本機預覽
 
