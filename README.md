@@ -32,6 +32,8 @@ python -m http.server 4173 --bind 127.0.0.1 --directory docs
 | `docs/styles.css` | 桌面與手機版樣式 |
 | `docs/app.js` | 六章教材、互動與導航 |
 | `docs/math.js` | 教學用純數學函式 |
+| `docs/first-test-guide.js` | 工具檢查與 8 筆 DC 演算教學 |
+| `docs/measurement-examples.js` | 編譯器安裝、三筆時間對齊與校正驗收單 |
 | `tests/math.test.mjs` | 獨立預期值的公式測試 |
 
 ## 驗證網站
@@ -40,6 +42,8 @@ python -m http.server 4173 --bind 127.0.0.1 --directory docs
 
 ```powershell
 node --check docs/app.js
+node --check docs/first-test-guide.js
+node --check docs/measurement-examples.js
 node --test
 ```
 
@@ -55,4 +59,15 @@ node --test
 - ASR5K_Old baseline：`5262007b56d420c74ac892692ea4d3969a3e3992`
 - ASR5K_AGENT baseline：`c930f3623255465b875c940775b7016b3093f5ca`
 
-教材建立時直接核對了固定 SHA 的 calibration_runtime.c getter 與 measurement_mvp_runtime.c 設定；其他來源行為依交接整理。沒有執行韌體測試、C28 build、燒錄、上電或板上精度驗證。部分來源連結需要對應 GitHub 存取權限。
+教材直接核對了固定 SHA 的 calibration_runtime.c getter 與 measurement_mvp_runtime.c 設定；2026-11-14 補充時另核對 measurement_core_test.py 的編譯方式、DC／反向電流案例及 measurement_core.c 的累加與結算。其他來源行為依交接整理。沒有執行韌體測試、C28 build、燒錄、上電或板上精度驗證。部分來源連結需要對應 GitHub 存取權限。
+
+## 2026-11-14 內容補充
+
+- 第一章：C 編譯器與路徑準備、Windows x64 的 MSYS2 安裝路線、常見錯誤判讀，以及 8 筆 DC 從 raw 到測試預期值的完整手算。
+- 第三章：三筆取樣的中心差分、n−1 時刻對齊、G/C 扣除與缺樣重新暖機。
+- 第四章：澄清 384 基準核心已支援 signed P/PF，與仍待完成的物理校正分開。
+- 第六章：校正資料階段 A 的案例、回退、完整安裝、generation 與驗收條件。
+
+所有合成數值、預期測試輸出與提案均有標示；新增教材不代表取得韌體 PASS 或板上精度證據。
+
+本輪確認新增章節、展開說明、命令複製回饋與桌面／390 px 手機排版，未見瀏覽器 JavaScript 錯誤；另完成內容交叉審查、3 支教材 JS 語法檢查及既有 17 項公式測試。
